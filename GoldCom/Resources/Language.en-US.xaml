@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="MainWindowTitle">Client GoldCom</v:String>
+    <v:String x:Key="LoginWindowTitle">Login</v:String>
+    <v:String x:Key="MainWindowTabMain">Main</v:String>
+    <v:String x:Key="MainWindowTabRequests">Requests</v:String>
+    <v:String x:Key="MainWindowTabCustomers">Customers</v:String>
+    <v:String x:Key="MainWindowTabStock">Stock</v:String>
+    <v:String x:Key="MainWindowTabUsers">Users</v:String>
+</ResourceDictionary>

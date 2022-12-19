@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="MainWindowTitle">Клиент GoldCom</v:String>
+    <v:String x:Key="LoginWindowTitle">Вход</v:String>
+    <v:String x:Key="MainWindowTabMain">Главная</v:String>
+    <v:String x:Key="MainWindowTabRequests">Заказы</v:String>
+    <v:String x:Key="MainWindowTabCustomers">Заказчики</v:String>
+    <v:String x:Key="MainWindowTabStock">Склад</v:String>
+    <v:String x:Key="MainWindowTabUsers">Пользователи</v:String>
+    <v:String x:Key="LoginWindowLogin">Логин</v:String>
+    <v:String x:Key="LoginWindowPassword">Пароль</v:String>
+    <v:String x:Key="LoginWindowEnter">Войти</v:String>
+    <v:String x:Key="LoginWindowWrongPasswordDialogTitle">Ошибка!</v:String>
+    <v:String x:Key="LoginWindowWrongPasswordDialogText">Логин или пароль введены не верно</v:String>
+    
+</ResourceDictionary>
