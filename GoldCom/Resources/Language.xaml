@@ -13,5 +13,24 @@
     <v:String x:Key="LoginWindowEnter">Войти</v:String>
     <v:String x:Key="LoginWindowWrongPasswordDialogTitle">Ошибка!</v:String>
     <v:String x:Key="LoginWindowWrongPasswordDialogText">Логин или пароль введены не верно</v:String>
-    
+
+    <v:String x:Key="Customer">Заказчик</v:String>
+    <v:String x:Key="CustomerCompanyName">Наименование компании</v:String>
+    <v:String x:Key="CustomerCompanyAddress">Адрес компании</v:String>
+    <v:String x:Key="CustomerCompanyPhone">Телефон компании</v:String>
+    <v:String x:Key="CustomerMail">Почта компании</v:String>
+    <v:String x:Key="CustomerOGRN">ОГРН</v:String>
+    <v:String x:Key="CustomerINN">ИНН</v:String>
+    <v:String x:Key="CustomerOKPO">ОКПО</v:String>
+    <v:String x:Key="CustomerOKVED">ОКВЕД</v:String>
+    <v:String x:Key="CustomerRepresentativeFirstName">Имя представителя</v:String>
+    <v:String x:Key="CustomerRepresentativeSurname">Фамилия представителя</v:String>
+    <v:String x:Key="CustomerRepresentativeLastName">Отчество представителя</v:String>
+    <v:String x:Key="CustomerRepresentativeName">ФИО представителя</v:String>
+    <v:String x:Key="CustomerRepresentativePhone">Телефон представителя</v:String>
+    <v:String x:Key="CustomerRepresentativeMail">Почта представителя</v:String>
+    <v:String x:Key="CustomerCeoFirstName">Имя директора</v:String>
+    <v:String x:Key="CustomerCeoSurname">Фамилия директора</v:String>
+    <v:String x:Key="CustomerCeoLastName">Отчество директора</v:String>
+    <v:String x:Key="CustomerCeoName">ФИО директора</v:String>
 </ResourceDictionary>
