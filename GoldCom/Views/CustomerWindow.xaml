@@ -1,0 +1,65 @@
+﻿<Window x:Class="GoldCom.Views.CustomerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GoldCom.Views"
+        mc:Ignorable="d"
+        Title="CustomerWindow" Height="900" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Style="{DynamicResource StackPanel1}" Grid.ColumnSpan="2">
+            <Label Grid.ColumnSpan="2" x:Name="titleLabel" Content="Заказчик:" Style="{DynamicResource TitleLabel}"/>
+            
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
+            <Label Content="Расположение" Style="{DynamicResource Label1Right}"/>
+            <Label Content="Телефон" Style="{DynamicResource Label1Right}"/>
+            <Label Content="Mail" Style="{DynamicResource Label1Right}"/>
+            <Label Content="ОГРН" Style="{DynamicResource Label1Right}"/>
+            <Label Content="ИНН" Style="{DynamicResource Label1Right}"/>
+            <Label Content="ОКПО" Style="{DynamicResource Label1Right}"/>
+            <Label Content="ОКВЕД" Style="{DynamicResource Label1Right}"/>
+            <Label Content="Фамилия представителя" Style="{DynamicResource Label1Right}"/>
+            <Label Content="Имя представителя" Style="{DynamicResource Label1Right}"/>
+            <Label Content="Отчество предствителя" Style="{DynamicResource Label1Right}"/>
+            <Label Content="Телефон представителя" Style="{DynamicResource Label1Right}"/>
+            <Label Content="Mail предствителя" Style="{DynamicResource Label1Right}"/>
+            <Label Content="Имя директора" Style="{DynamicResource Label1Right}"/>
+            <Label Content="Фамилия директора" Style="{DynamicResource Label1Right}"/>
+            <Label Content="Отчество директора" Style="{DynamicResource Label1Right}"/>
+            <Label Content="Наименование компании" Style="{DynamicResource Label1Right}"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+            <TextBox x:Name="companyNameTextBox" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="companyLocationTextBox" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="companyPhoneTextBox" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="mailTextBox" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="OGRNTextBox" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="INNTextBox" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="OKPOTextBox" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="OKVEDTextBox" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="representativeSurnameTextBox" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="representativeFirstNameTextBox" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="representativeLastNameTextBox" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="representativePhone" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="representativeMailTextBox" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="CEOFirstNameTextBox" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="CEOSurnameTextBox" Style="{DynamicResource InputMax}"/>
+            <TextBox x:Name="CEOLastNameTextBox" Style="{DynamicResource InputMax}"/>
+        </StackPanel>
+        <Button 
+            x:Name="createCustomerButton"
+            Content="Создать" 
+            Style="{DynamicResource Button1}"
+            Grid.ColumnSpan="2" Grid.Row="2"/>
+    </Grid>
+</Window>
