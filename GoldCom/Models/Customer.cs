@@ -10,7 +10,7 @@ public class Customer : DbEntity
     public string CompanyName { get; set; }
     public string CompanyAddress { get; set; }
     public string CompanyPhone { get; set; }
-    public string Mail { get; set; }
+    public string CompanyMail { get; set; }
     public string OGRN { get; set; }
     public string INN { get; set; }
     public string OKPO { get; set; }
@@ -23,4 +23,6 @@ public class Customer : DbEntity
     public string CeoFirstName { get; set; }
     public string CeoSurname { get; set; }
     public string CeoLastName { get; set;}
+    public string RepresentativeName => $"{RepresentativeSurname} {RepresentativeFirstName} {RepresentativeLastName}";
+    public string CeoName => $"{CeoSurname} {CeoFirstName} {CeoLastName}";
 }
