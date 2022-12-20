@@ -9,6 +9,8 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="MinWidth" Value="50"/>
         <Setter Property="MinHeight" Value="35"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
     </Style>
     <Style TargetType="Label" x:Key="Label1" BasedOn="{StaticResource ControlStyle}">
         <Setter Property="VerticalContentAlignment" Value="Stretch"/>
@@ -32,6 +34,7 @@
         <Setter Property="MinWidth" Value="200"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
         <Setter Property="Margin" Value="5"/>
+        <Setter Property="TextAlignment" Value="Left"/>
     </Style>
     <Style TargetType="PasswordBox" x:Key="Password1" BasedOn="{StaticResource ControlStyle}">
         <Setter Property="MinWidth" Value="150"/>
@@ -60,6 +63,9 @@
     <Style TargetType="DataGrid" x:Key="DataGrid1" BasedOn="{StaticResource ControlStyle}">
         <Setter Property="CanUserDeleteRows" Value="False"/>
         <Setter Property="AutomationProperties.IsRowHeader" Value="False"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="AutoGenerateColumns" Value="False"/>
 
     </Style>
     <Style TargetType="StackPanel" x:Key="StackPanel1">

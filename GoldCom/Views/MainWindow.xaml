@@ -16,13 +16,69 @@
                 </StackPanel>
             </Grid>
         </TabItem>
-        <TabItem Header="{DynamicResource MainWindowTabRequests}">
-            <Grid>
-            </Grid>
+        <TabItem x:Name="requestTab" Header="{DynamicResource MainWindowTabRequests}" Loaded="requestTab_Loaded">
+            <StackPanel Style="{DynamicResource StackPanel1}">
+                <StackPanel Style="{DynamicResource StackPanel1}" Orientation="Horizontal">
+                    <Button 
+                        Content="{DynamicResource FormButtonCreate}" 
+                        Style="{DynamicResource Button1}"/>
+                    <Button 
+                        Content="{DynamicResource ProcessOrder}"
+                        Style="{DynamicResource Button1}"/>
+                </StackPanel>
+                <DataGrid x:Name="requestsDataGrid" Style="{DynamicResource DataGrid1}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="{DynamicResource CustomerCompanyName}" Binding="{Binding CompanyName}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerCompanyAddress}" Binding="{Binding CompanyAddress}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerCompanyPhone}" Binding="{Binding CompanyPhone}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerCompanyMail}" Binding="{Binding CompanyMail}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerOGRN}" Binding="{Binding OGRN}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerINN}" Binding="{Binding INN}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerOKPO}" Binding="{Binding OKPO}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerOKVED}" Binding="{Binding OKVED}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerRepresentativeName}" Binding="{Binding RepresentativeName}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerRepresentativePhone}" Binding="{Binding RepresentativePhone}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerRepresentativeMail}" Binding="{Binding RepresentativeEmail}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerCeoName}" Binding="{Binding CeoName}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
         </TabItem>
-        <TabItem Header="{DynamicResource MainWindowTabCustomers}">
-            <Grid>
-            </Grid>
+        <TabItem 
+            x:Name="customersTab" 
+            Header="{DynamicResource MainWindowTabCustomers}"
+            
+            GotFocus="customersTab_GotFocus">
+            <StackPanel Style="{DynamicResource StackPanel1}">
+                <StackPanel Orientation="Horizontal" Style="{DynamicResource StackPanel1}">
+                    <Button 
+                        x:Name="addCustomerButton"
+                        Content="{DynamicResource FormButtonAdd}" 
+                        Style="{DynamicResource Button1}"
+                        Click="addCustomerButton_Click"/>
+                    <Button 
+                        x:Name="editCustomerButton"
+                        Content="{DynamicResource FormButtonEdit}"
+                        Style="{DynamicResource Button1}"
+                        Click="editCustomerButton_Click"/>
+                </StackPanel>
+                <DataGrid x:Name="customersDataGrid" Style="{DynamicResource DataGrid1}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="{DynamicResource CustomerCompanyName}" Binding="{Binding CompanyName}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerCompanyAddress}" Binding="{Binding CompanyAddress}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerCompanyPhone}" Binding="{Binding CompanyPhone}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerCompanyMail}" Binding="{Binding CompanyMail}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerOGRN}" Binding="{Binding OGRN}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerINN}" Binding="{Binding INN}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerOKPO}" Binding="{Binding OKPO}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerOKVED}" Binding="{Binding OKVED}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerRepresentativeName}" Binding="{Binding RepresentativeName}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerRepresentativePhone}" Binding="{Binding RepresentativePhone}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerRepresentativeMail}" Binding="{Binding RepresentativeEmail}"/>
+                        <DataGridTextColumn Header="{DynamicResource CustomerCeoName}" Binding="{Binding CeoName}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
         </TabItem>
         <TabItem Header="{DynamicResource MainWindowTabStock}">
             <Grid>

@@ -47,7 +47,9 @@ namespace GoldCom.Views
             {
                 using (var context = new ApplicationContext())
                 {
-                    context.Add(_customer);
+                    //_customer.Id = context.Customers.Last().Id + 1;
+                    MessageBox.Show(context.Customers.First().Id.ToString());
+                    context.Customers.Add(_customer);
                     context.SaveChanges();
                 }
             }

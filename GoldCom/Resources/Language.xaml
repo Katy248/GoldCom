@@ -34,7 +34,12 @@
     <v:String x:Key="CustomerCeoLastName">Отчество директора</v:String>
     <v:String x:Key="CustomerCeoName">ФИО директора</v:String>
 
-    <v:String x:Key="FormButtonCreate"></v:String>
-    <v:String x:Key="FormButtonEdit"></v:String>
-    <v:String x:Key="FormButtonUpdate"></v:String>
+    <v:String x:Key="Order">Заказ</v:String>
+    <v:String x:Key="ProcessOrder">Обработать заказ</v:String>
+    
+    
+    <v:String x:Key="FormButtonCreate">Создать</v:String>
+    <v:String x:Key="FormButtonEdit">Изменить</v:String>
+    <v:String x:Key="FormButtonUpdate">Обновить</v:String>
+    <v:String x:Key="FormButtonAdd">Добавить</v:String>
 </ResourceDictionary>

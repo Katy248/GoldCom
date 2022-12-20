@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GoldCom.Database;
 using GoldCom.Models;
 using GoldCom.Views;
 
@@ -43,4 +44,32 @@ public partial class MainWindow : Window
         return login.LoggedUser;
     }
     private User? CurrentUser { get; set; }
+
+    private void UpdateDataGrid(DataGrid dataGrid, IEnumerable<object> items)
+    {
+        //dataGrid.Items.Clear();
+        dataGrid.ItemsSource = items;
+    }
+
+    private void requestTab_Loaded(object sender, RoutedEventArgs e)
+    {
+        using (var context = new ApplicationContext())
+            UpdateDataGrid(requestsDataGrid, context.Requests.ToArray());
+    }
+
+
+    private void addCustomerButton_Click(object sender, RoutedEventArgs e)
+        => new CustomerWindow(FormType.Create).ShowDialog();
+
+    private void editCustomerButton_Click(object sender, RoutedEventArgs e) 
+    {
+        if (customersDataGrid.SelectedItem is not null) 
+            new CustomerWindow(FormType.Edit, customersDataGrid.SelectedItem as Customer).ShowDialog();
+    }
+
+    private void customersTab_GotFocus(object sender, RoutedEventArgs e)
+    {
+        using (var context = new ApplicationContext())
+            UpdateDataGrid(customersDataGrid, context.Customers.ToArray());
+    }
 }
