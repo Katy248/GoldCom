@@ -5,13 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GoldCom.Views"
         mc:Ignorable="d"
-        Title="MessageWindow" Height="150" Width="250"
+        Title="MessageWindow" Height="250" Width="350"
         ResizeMode="NoResize"
         ShowInTaskbar="False"
-        WindowStartupLocation="CenterScreen"
-        >
-    <Grid>
-        <StackPanel VerticalAlignment="Stretch">
+        WindowStartupLocation="CenterScreen">
+    <Border BorderThickness="0" BorderBrush="Black">
+        <StackPanel VerticalAlignment="Stretch" Orientation="Vertical">
             <Label 
                 x:Name="titleLabel"
                 Content="Title" 
@@ -34,5 +33,5 @@
                 TabIndex="0"
                 />
         </StackPanel>
-    </Grid>
+    </Border>
 </Window>
