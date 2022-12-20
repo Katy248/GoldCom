@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="{DynamicResource LoginWindowTitle}" Height="400" Width="300"
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow">
     <Grid>
         <StackPanel Orientation="Vertical"  VerticalAlignment="Center" HorizontalAlignment="Center">
             <Label
@@ -15,7 +16,7 @@
                 Style="{DynamicResource TitleLabel}"/>
             <Label 
                 Content="{DynamicResource LoginWindowLogin}"
-                Style="{DynamicResource Label1}"/>
+                Style="{DynamicResource Label1}" FontFamily="{DynamicResource Montserrat}"/>
             <TextBox 
                 x:Name="loginBox" 
                 Style="{DynamicResource Input1}"/>
