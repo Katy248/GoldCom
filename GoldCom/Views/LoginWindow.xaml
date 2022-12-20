@@ -8,9 +8,9 @@
         Title="{DynamicResource LoginWindowTitle}" Height="400" Width="300"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="ToolWindow">
+        WindowStyle="ThreeDBorderWindow">
     <Grid>
-        <StackPanel Orientation="Vertical"  VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical" Style="{DynamicResource StackPanel1}">
             <Label
                 Content="{DynamicResource LoginWindowTitle}"
                 Style="{DynamicResource TitleLabel}"/>
