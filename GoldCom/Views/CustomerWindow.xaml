@@ -12,50 +12,50 @@
             <RowDefinition Height="10*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <StackPanel Style="{DynamicResource StackPanel1}" Grid.ColumnSpan="2">
             <Label Grid.ColumnSpan="2" x:Name="titleLabel" Content="{DynamicResource Customer}" Style="{DynamicResource TitleLabel}"/>
-            
+
         </StackPanel>
-        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
-            <Label Content="{DynamicResource CustomerCompanyName}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerCompanyAddress}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerCompanyPhone}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerCompanyMail}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerOGRN}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerINN}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerOKPO}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerOKVED}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerRepresentativeFirstName}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerRepresentativeSurname}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerRepresentativeLastName}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerRepresentativePhone}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerRepresentativeMail}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerCeoFirstName}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerCeoSurname}" Style="{DynamicResource Label1Right}"/>
-            <Label Content="{DynamicResource CustomerCeoLastName}" Style="{DynamicResource Label1Right}"/>
+        <ScrollViewer Grid.Row="1">
+        <StackPanel Orientation="Horizontal" CanVerticallyScroll="True" CanHorizontallyScroll="True">
+            <StackPanel Orientation="Vertical">
+                <Label Content="{DynamicResource CustomerCompanyName}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerCompanyAddress}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerCompanyPhone}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerCompanyMail}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerOGRN}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerINN}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerOKPO}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerOKVED}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerRepresentativeFirstName}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerRepresentativeSurname}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerRepresentativeLastName}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerRepresentativePhone}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerRepresentativeMail}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerCeoFirstName}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerCeoSurname}" Style="{DynamicResource Label1Right}"/>
+                <Label Content="{DynamicResource CustomerCeoLastName}" Style="{DynamicResource Label1Right}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <TextBox Text="{Binding CompanyName}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding CompanyAddress}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding CompanyPhone}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding CompanyMail}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding OGRN}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding INN}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding OKPO}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding OKVED}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding RepresentativeFirstName}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding RepresentativeSurname}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding RepresentativeLastName}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding RepresentativePhone}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding RepresentativeEmail}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding CeoFirstName}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding CeoSurname}" Style="{DynamicResource InputMax}"/>
+                <TextBox Text="{Binding CeoLastName}" Style="{DynamicResource InputMax}"/>
+            </StackPanel>
         </StackPanel>
-        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
-            <TextBox Text="{Binding CompanyName}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding CompanyAddress}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding CompanyPhone}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding CompanyMail}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding OGRN}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding INN}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding OKPO}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding OKVED}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding RepresentativeFirstName}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding RepresentativeSurname}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding RepresentativeLastName}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding RepresentativePhone}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding RepresentativeEmail}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding CeoFirstName}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding CeoSurname}" Style="{DynamicResource InputMax}"/>
-            <TextBox Text="{Binding CeoLastName}" Style="{DynamicResource InputMax}"/>
-        </StackPanel>
+        </ScrollViewer>
         <Button 
             x:Name="enterButton"
             Content="Создать" 
