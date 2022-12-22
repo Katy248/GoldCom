@@ -7,6 +7,45 @@
         mc:Ignorable="d"
         Title="RequestCreationWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Style="{DynamicResource StackPanel1}" Grid.ColumnSpan="2">
+            <Label Grid.ColumnSpan="2" x:Name="titleLabel" Content="{DynamicResource Request}" Style="{DynamicResource TitleLabel}"/>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Orientation="Horizontal" CanVerticallyScroll="True" CanHorizontallyScroll="True">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="{DynamicResource RequestCustomer}" Style="{DynamicResource Label1Right}"/>
+                    <Label Content="{DynamicResource StockUnitType}" Style="{DynamicResource Label1Right}"/>
+                    <Label Content="{DynamicResource StockUnitAdditionalElementsPercentage}" Style="{DynamicResource Label1Right}"/>
+                    <Label Content="{DynamicResource StockUnitAuthenticityCertificateNumber}" Style="{DynamicResource Label1Right}"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <ComboBox 
+                        Style="{DynamicResource ComboBoxMax}"
+                        x:Name="customersBox"
+                        SelectedItem="{Binding SelectedCustomersLabel}"/>
+                    <ComboBox 
+                        Style="{DynamicResource ComboBoxMax}"
+                        x:Name="typesBox"
+                        SelectedItem="{Binding SelectedMaterialType}"/>
+                    <TextBox 
+                        Text="{Binding AdditionalElementsPercentage}" 
+                        Style="{DynamicResource InputMax}"/>
+                    <TextBox 
+                        Text="{Binding AuthenticityCertificateNumber}" 
+                        Style="{DynamicResource InputMax}"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        <Button 
+            x:Name="enterButton"
+            Content="Создать" 
+            Style="{DynamicResource Button1}"
+            Grid.ColumnSpan="2" Grid.Row="2"
+            Click="enterButton_Click"/>
     </Grid>
 </Window>
