@@ -34,9 +34,26 @@
     <v:String x:Key="CustomerCeoLastName">Отчество директора</v:String>
     <v:String x:Key="CustomerCeoName">ФИО директора</v:String>
 
-    <v:String x:Key="Order">Заказ</v:String>
-    <v:String x:Key="ProcessOrder">Обработать заказ</v:String>
-    
+    <v:String x:Key="Request">Заказ</v:String>
+    <v:String x:Key="RequestCustomer">Заказчик</v:String>
+    <v:String x:Key="RequestEmployee">Сотрудник</v:String>
+    <v:String x:Key="RequestCreationDate">Дата создания заказа</v:String>
+
+    <v:String x:Key="Report">Отчёт</v:String>
+    <v:String x:Key="ReportStockUnit">Объект на складе</v:String>
+    <v:String x:Key="ReportEmployee">Сотрудник</v:String>
+    <v:String x:Key="DeliveryReport">Отчёт о поставке</v:String>
+    <v:String x:Key="DeliveryReportDeliveryDate">Дата поставки</v:String>
+    <v:String x:Key="ShipmentReport">Отчёт об отгрузке</v:String>
+    <v:String x:Key="ShipmentReportShipmentDate">Дата отгрузки</v:String>
+
+
+    <v:String x:Key="StockUnit">Объект на складе</v:String>
+    <v:String x:Key="StockUnitType">Материал</v:String>
+    <v:String x:Key="StockUnitAuthenticityCertificateNumber">Номер сертификата подлинности</v:String>
+    <v:String x:Key="StockUnitAdditionalElementsPercentage">Процент добавочных материалов</v:String>
+
+    <v:String x:Key="ProcessRequest">Обработать заказ</v:String>
     
     <v:String x:Key="FormButtonCreate">Создать</v:String>
     <v:String x:Key="FormButtonEdit">Изменить</v:String>
