@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GoldCom.Models;
 public class Request : DbEntity
 {
-    public User Customer { get; set; }
+    public Customer Customer { get; set; }
     public User Employee { get; set; }
     public DateTime CreationDate { get; set; }
 }
