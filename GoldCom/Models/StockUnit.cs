@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GoldCom.Models;
 public class StockUnit : DbEntity
 {
-    public MaterialType Type { get; set; }
+    public MaterialType MaterialType { get; set; }
     public Request Request { get; set; }
     public int AuthenticityCertificateNumber { get; set; }
     public int AdditionalElementsPercentage { get; set; }
