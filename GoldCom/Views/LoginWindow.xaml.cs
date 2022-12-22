@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -38,6 +39,12 @@ public partial class LoginWindow : Window
 
             context.Add(user2);
             context.Add(user1);
+            context.SaveChanges();*/
+
+            /*var m1 = new MaterialType() { Name = "Gold", Price = 12 };
+            var m2 = new MaterialType() { Name = "Silver", Price = 9 };
+            context.Add(m1);
+            context.Add(m2);
             context.SaveChanges();*/
             LoggedUser = context.Users
                 .FirstOrDefault(u => u.Email == loginBox.Text && u.Password == passwordBox.Password);
