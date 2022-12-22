@@ -58,14 +58,16 @@ public partial class MainWindow : Window
     }
 
 
-    private void addCustomerButton_Click(object sender, RoutedEventArgs e)
-        => new CustomerWindow(FormType.Create).ShowDialog();
+    private void addCustomerButton_Click(object sender, RoutedEventArgs e) => 
+        new CustomerWindow(FormType.Create).ShowDialog();
 
     private void editCustomerButton_Click(object sender, RoutedEventArgs e) 
     {
         if (customersDataGrid.SelectedItem is not null) 
             new CustomerWindow(FormType.Edit, customersDataGrid.SelectedItem as Customer).ShowDialog();
     }
+    private void createRequestButton_Click(object sender, RoutedEventArgs e) =>
+        new RequestCreationWindow(CurrentUser).ShowDialog();
 
     private void customersTab_GotFocus(object sender, RoutedEventArgs e)
     {

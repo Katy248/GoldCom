@@ -21,9 +21,10 @@
                 <StackPanel Style="{DynamicResource StackPanel1}" Orientation="Horizontal">
                     <Button 
                         Content="{DynamicResource FormButtonCreate}" 
-                        Style="{DynamicResource Button1}"/>
+                        Style="{DynamicResource Button1}"
+                        Click="createRequestButton_Click"/>
                     <Button 
-                        Content="{DynamicResource ProcessOrder}"
+                        Content="{DynamicResource ProcessRequest}"
                         Style="{DynamicResource Button1}"/>
                 </StackPanel>
                 <DataGrid x:Name="requestsDataGrid" Style="{DynamicResource DataGrid1}">
