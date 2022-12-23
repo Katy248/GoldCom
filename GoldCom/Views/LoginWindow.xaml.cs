@@ -39,9 +39,9 @@ public partial class LoginWindow : Window
 
             context.Add(user2);
             context.Add(user1);
-            context.SaveChanges();*/
+            context.SaveChanges();
 
-            /*var m1 = new MaterialType() { Name = "Gold", Price = 12 };
+            var m1 = new MaterialType() { Name = "Gold", Price = 12 };
             var m2 = new MaterialType() { Name = "Silver", Price = 9 };
             context.Add(m1);
             context.Add(m2);
