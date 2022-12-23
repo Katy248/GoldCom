@@ -33,8 +33,19 @@ namespace GoldCom.Views
 
         private void enterButton_Click(object sender, RoutedEventArgs e)
         {
-            viewModel.UpdateData();
-            Close();
+            if (!viewModel.Validate())
+            {
+                viewModel.UpdateData();
+                Close();
+            }
+            else
+                MessageWindow.ShowDialog(dialog =>
+                {
+                    dialog.Text = FindResource("FormMessageErroIncorrectInputData").ToString();
+                    dialog.TitleText = FindResource("FormMessageErrorIncorrectInputDataTitle").ToString();
+                    dialog.ButtonText = "Ok";
+                });
+            
         }
     }
 }
