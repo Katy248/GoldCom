@@ -23,11 +23,11 @@ public class RequestViewModel
             {
                 MaterialTypes.Add(new Label() { Content = type });
             }
-            SelectedMaterialType = MaterialTypes.FirstOrDefault();
             foreach (var customer in context.Customers.ToArray())
             {
                 Customers.Add(new Label() { Content = customer });
             }
+            SelectedMaterialType = MaterialTypes.FirstOrDefault();
             SelectedCustomersLabel = Customers.FirstOrDefault();
         }
     }
@@ -63,28 +63,37 @@ public class RequestViewModel
     private Label? selectedMaterialType;
     private Label? selectedCustomersLabel;
 
-    public Label SelectedMaterialType
+    public Label? SelectedMaterialType
     {
         get => selectedMaterialType ?? MaterialTypes.FirstOrDefault();
         set
         {
             selectedMaterialType = value;
-            RequestStockUnit.MaterialType = value.Content as MaterialType;
+            RequestStockUnit.MaterialType = value?.Content as MaterialType;
         }
     }
-    public Label SelectedCustomersLabel
+    public Label? SelectedCustomersLabel
     {
         get => selectedCustomersLabel ?? Customers.FirstOrDefault();
         set
         {
             selectedCustomersLabel = value;
-            Request.Customer = value.Content as Customer;
+            Request.Customer = value?.Content as Customer;
         }
     }
 
-
+    public bool Validate()
+    {
+        return 
+            Request.Customer is null 
+            || RequestStockUnit.MaterialType is null 
+            || RequestStockUnit.AuthenticityCertificateNumber == 0 
+            || RequestStockUnit.AdditionalElementsPercentage <= 0;
+    }
     public void UpdateData()
     {
+        if (Validate()) return;
+        
         Request.CreationDate = DateTime.Now;
         using (var context = new ApplicationContext())
         {
