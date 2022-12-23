@@ -59,4 +59,6 @@
     <v:String x:Key="FormButtonEdit">Изменить</v:String>
     <v:String x:Key="FormButtonUpdate">Обновить</v:String>
     <v:String x:Key="FormButtonAdd">Добавить</v:String>
+    <v:String x:Key="FormMessageErrorIncorrectInputDataTitle">Ошибка ввода</v:String>
+    <v:String x:Key="FormMessageErroIncorrectInputData">Данные введены некорректно!</v:String>
 </ResourceDictionary>
