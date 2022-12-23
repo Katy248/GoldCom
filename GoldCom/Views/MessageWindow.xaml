@@ -10,7 +10,12 @@
         ShowInTaskbar="False"
         WindowStartupLocation="CenterScreen">
     <Border BorderThickness="0" BorderBrush="Black">
-        <StackPanel VerticalAlignment="Stretch" Orientation="Vertical">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
             <Label 
                 x:Name="titleLabel"
                 Content="Title" 
@@ -18,13 +23,15 @@
                 Margin="0,0,0,5"
                 FontSize="18"
                 MaxWidth="230"/>
-            <TextBlock 
+                <TextBlock 
+                Grid.Row="1"
                 x:Name="textBlock"
                 Text="Content" 
                 Style="{DynamicResource TextBlock1}"
                 FontSize="14"
                 MaxWidth="230"/>
-            <Button 
+                <Button 
+                Grid.Row="2"
                 x:Name="button"
                 Content="Button" 
                 Style="{DynamicResource Button1}"
@@ -32,6 +39,6 @@
                 IsDefault="True"
                 TabIndex="0"
                 />
-        </StackPanel>
+        </Grid>
     </Border>
 </Window>
