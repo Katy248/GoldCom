@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:GoldCom.Views"
              xmlns:viewmodels="clr-namespace:GoldCom.ViewModel"
              xmlns:models="clr-namespace:GoldCom.Models"
-             xmlns:views="clr-namespace:GoldCom.Views"
+             xmlns:cc="clr-namespace:GoldCom.Views.CustomControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -15,28 +15,47 @@
             <RowDefinition Height="*" MinHeight="200"/>
         </Grid.RowDefinitions>
         <Border Grid.RowSpan="2" Style="{StaticResource ViewBorder2}"/>
-        <ContentControl Content="{Binding NavigationBar}">
-            <ContentControl.Resources>
-                <DataTemplate DataType="{x:Type viewmodels:NavigationBarViewModel}">
-                    <local:NavigationBarView/>
-                </DataTemplate>
-            </ContentControl.Resources>
-        </ContentControl>
-        <StackPanel Grid.Row="1" Style="{StaticResource StackPanel1}">
-            <Label Style="{StaticResource Label1}" Content="Customers"/>
-            <DataGrid ItemsSource="{Binding Customers}" AutoGenerateColumns="False">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding CompanyName}"/>
-                    <DataGridTextColumn Binding="{Binding RepresentativeEmail}"/>
-                </DataGrid.Columns>
-                <!--<models:Customer CompanyName="Company 1" RepresentativeEmail="a@mail.ru"/>
-                <models:Customer CompanyName="Company 1" RepresentativeEmail="a@mail.ru"/>
-            -->
-                </DataGrid>
+        <StackPanel>
+            <ContentControl Content="{Binding NavigationBar}">
+                <ContentControl.Resources>
+                    <DataTemplate DataType="{x:Type viewmodels:NavigationBarViewModel}">
+                        <local:NavigationBarView/>
+                    </DataTemplate>
+                </ContentControl.Resources>
+            </ContentControl>
         </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Style="{StaticResource Label1}" Content="Customers"/>
+            <cc:CustomerItemsHeader Grid.Row="1" Margin="10"/>
+            <ScrollViewer 
+                Grid.Row="2"
+                Margin="10"
+                VerticalScrollBarVisibility="Hidden">
+                <ItemsControl 
+                    VirtualizingStackPanel.VirtualizationMode="Recycling"
+                    VirtualizingStackPanel.IsVirtualizing="True"
+                    ItemsSource="{Binding Customers}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate DataType="models:Customer">
+                            <cc:CustomerItem/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+        </Grid>
     </Grid>
     <UserControl.Resources>
-        
+
         <Style TargetType="{x:Type DataGridCell}">
             <Setter Property="HorizontalContentAlignment" Value="Right"/>
             <Setter Property="Foreground" Value="White"/>

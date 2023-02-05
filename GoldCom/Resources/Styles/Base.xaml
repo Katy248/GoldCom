@@ -24,8 +24,8 @@
     <!--Label1-->
     <Style TargetType="Label" x:Key="Label1" BasedOn="{StaticResource ControlStyle}">
         <Setter Property="Margin" Value="0, 10, 0, 0"/>
-        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
-        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Foreground" Value="White"/>
     </Style>
     
@@ -181,11 +181,14 @@
 
     </Style>
     
+    <!--TextBox1-->
     <Style TargetType="TextBlock" x:Key="TextBlock1">
+        <Setter Property="Foreground" Value="White"/>
         <Setter Property="FontFamily" Value="Montserrat"/>
         <Setter Property="FontSize" Value="18"/>
-        <Setter Property="Margin" Value="0,5,0,0"/>
+        <Setter Property="Margin" Value="5"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="MinWidth" Value="50"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
         <Setter Property="TextAlignment" Value="Center"/>
