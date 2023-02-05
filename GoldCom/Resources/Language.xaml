@@ -4,6 +4,7 @@
     <v:String x:Key="MainWindowTitle">Клиент GoldCom</v:String>
     <v:String x:Key="LoginWindowTitle">Вход</v:String>
     <v:String x:Key="MainWindowTabMain">Главная</v:String>
+    <v:String x:Key="MainWindowButtonUpdate">Обновить</v:String>
     <v:String x:Key="MainWindowTabRequests">Заказы</v:String>
     <v:String x:Key="MainWindowTabCustomers">Заказчики</v:String>
     <v:String x:Key="MainWindowTabStock">Склад</v:String>
@@ -61,4 +62,6 @@
     <v:String x:Key="FormButtonAdd">Добавить</v:String>
     <v:String x:Key="FormMessageErrorIncorrectInputDataTitle">Ошибка ввода</v:String>
     <v:String x:Key="FormMessageErroIncorrectInputData">Данные введены некорректно!</v:String>
+
+    <v:String x:Key="WelcomeMessage">Добро пожаловать</v:String>
 </ResourceDictionary>

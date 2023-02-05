@@ -7,16 +7,16 @@ using GoldCom.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace GoldCom.Database;
-public class ApplicationContext : DbContext
+public class ApplicationDbContext : DbContext
 {
-    public ApplicationContext()
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
         Database.EnsureCreated();
     }
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=GoldComDB.db");
-    }
+        optionsBuilder.UseSqlite("");
+    }*/
     public DbSet<Customer> Customers { get; set; }
     public DbSet<DeliveryReport> DeliveryReports { get; set; }
     public DbSet<ShipmentReport> ShipmentReports { get; set; }

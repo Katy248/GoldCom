@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="GoldCom.Views.NavigationBarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GoldCom.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="800">
+    <Border Style="{StaticResource ViewBorder}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <!--Title-->
+            <Label 
+                Style="{DynamicResource Label1}"
+                Content="{DynamicResource MainWindowTitle}"
+                VerticalAlignment="Center"
+                VerticalContentAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="10 2 2 2"/>
+            <!--Nav buttons-->
+            <StackPanel 
+                Grid.Column="1"
+                Orientation="Horizontal">
+                <Button Content="Home" Command="{Binding NavigateToHome}" />
+                <Button Content="Customers" Command="{Binding NavigateToCustomers}" />
+                <Button Content="Requests" Command="{Binding NavigateToRequests}" />
+                <Button Content="Stock" Command="{Binding NavigateToStock}" />
+                <!--<Button Content="Users" Style="{DynamicResource NavButton}" />-->
+                
+            </StackPanel>
+        </Grid>
+        <Border.Resources>
+            <Style TargetType="Button" BasedOn="{StaticResource NavButton}">
+                
+            </Style>
+        </Border.Resources>
+    </Border>
+</UserControl>

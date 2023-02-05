@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using GoldCom.Database;
 using GoldCom.Models;
+using KVVM.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace GoldCom.ViewModel;
 
-public class RequestViewModel
+public class RequestViewModel : ViewModelBase
 {
     public RequestViewModel(User employee)
     {
         Request = new();
         RequestStockUnit = new();
         Employee = employee;
-        using (var context = new ApplicationContext())
+        using (var context = new ApplicationDbContext(null)) //TODO: finish
         {
             foreach (var type in context.MaterialTypes.ToArray())
             {
@@ -95,7 +96,7 @@ public class RequestViewModel
         if (Validate()) return;
         
         Request.CreationDate = DateTime.Now;
-        using (var context = new ApplicationContext())
+        using (var context = new ApplicationDbContext(null))//TODO: finish
         {
             Request.Employee = context.Users.First(u=> u.Id == Employee.Id);
             Request.Customer = context.Customers.First(c => c.Id == (SelectedCustomersLabel.Content as Customer).Id);

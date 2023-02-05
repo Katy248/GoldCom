@@ -45,7 +45,7 @@ namespace GoldCom.Views
         {
             if (_formType == FormType.Create)
             {
-                using (var context = new ApplicationContext())
+                using (var context = new ApplicationDbContext(null))//TODO: finish
                 {
                     //_customer.Id = context.Customers.Last().Id + 1;
                     //MessageBox.Show(context.Customers.First().Id.ToString());
@@ -55,7 +55,7 @@ namespace GoldCom.Views
             }
             else
             {
-                using (var context = new ApplicationContext())
+                using (var context = new ApplicationDbContext(null))//TODO: finish
                 {
                     context.Update(_customer);
                     context.SaveChanges();
