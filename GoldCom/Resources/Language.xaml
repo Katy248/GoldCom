@@ -16,6 +16,7 @@
     <v:String x:Key="LoginWindowWrongPasswordDialogText">Логин или пароль введены не верно</v:String>
 
     <v:String x:Key="Customer">Заказчик</v:String>
+    <v:String x:Key="Customers">Заказчики</v:String>
     <v:String x:Key="CustomerCompanyName">Наименование компании</v:String>
     <v:String x:Key="CustomerCompanyAddress">Адрес компании</v:String>
     <v:String x:Key="CustomerCompanyPhone">Телефон компании</v:String>
@@ -64,4 +65,10 @@
     <v:String x:Key="FormMessageErroIncorrectInputData">Данные введены некорректно!</v:String>
 
     <v:String x:Key="WelcomeMessage">Добро пожаловать</v:String>
+
+    <v:String x:Key="EditCustomer">Редактировать заказчика</v:String>
+    <v:String x:Key="AddCustomer">Добавить заказчика</v:String>
+    <v:String x:Key="DeleteCustomer">Удалить заказчика</v:String>
+    
+    
 </ResourceDictionary>

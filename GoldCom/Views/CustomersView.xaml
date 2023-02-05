@@ -29,8 +29,9 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Style="{StaticResource Label1}" Content="Customers"/>
+            <Label Style="{StaticResource Label1}" Content="{StaticResource Customers}"/>
             <cc:CustomerItemsHeader Grid.Row="1" Margin="10"/>
             <ScrollViewer 
                 Grid.Row="2"
@@ -52,10 +53,21 @@
                     </ItemsControl.ItemsPanel>
                 </ItemsControl>
             </ScrollViewer>
+            <StackPanel Style="{StaticResource StackPanel1}"
+                Grid.Row="3"
+                Orientation="Horizontal" 
+                HorizontalAlignment="Right">
+                <Button Content="{StaticResource AddCustomer}"/>
+                <Button Content="{StaticResource EditCustomer}"/>
+                <Button Content="{StaticResource DeleteCustomer}"/>
+            </StackPanel>
         </Grid>
     </Grid>
     <UserControl.Resources>
 
+        <Style TargetType="Button" BasedOn="{StaticResource Button1}">
+            
+        </Style>
         <Style TargetType="{x:Type DataGridCell}">
             <Setter Property="HorizontalContentAlignment" Value="Right"/>
             <Setter Property="Foreground" Value="White"/>
