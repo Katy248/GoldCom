@@ -43,14 +43,18 @@
                     ItemsSource="{Binding Customers}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate DataType="models:Customer">
-                            <cc:CustomerItem/>
+                            <cc:CustomerItem 
+                                HorizontalContentAlignment="Stretch"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch"
+                                VerticalContentAlignment="Stretch"/>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
-                    <ItemsControl.ItemsPanel>
+                    <!--<ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel/>
                         </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
+                    </ListBox.ItemsPanel>-->
                 </ItemsControl>
             </ScrollViewer>
             <StackPanel Style="{StaticResource StackPanel1}"
@@ -65,6 +69,14 @@
     </Grid>
     <UserControl.Resources>
 
+        <Style TargetType="ItemsControl">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+                    
+                </Trigger>
+            </Style.Triggers>
+        </Style>
         <Style TargetType="Button" BasedOn="{StaticResource Button1}">
             
         </Style>

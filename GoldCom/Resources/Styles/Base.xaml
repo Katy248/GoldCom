@@ -7,6 +7,12 @@
     <SolidColorBrush x:Key="AddColor" Color="#8F8B88"/>
     <SolidColorBrush x:Key="AddDarkColor" Color="#6B6967" />
     <SolidColorBrush x:Key="AddAccentColor" Color="#5D432C" />
+
+    <SolidColorBrush x:Key="c1" Color="#0B0C10" />
+    <SolidColorBrush x:Key="c2" Color="#1F2833" />
+    <SolidColorBrush x:Key="c3" Color="#C5C6C7" />
+    <SolidColorBrush x:Key="c4" Color="#66FCF1" />
+    <SolidColorBrush x:Key="c5" Color="#45A29E" />
     
     <!--Base control-->
     <Style TargetType="Control" x:Key="ControlStyle">
@@ -107,10 +113,11 @@
     <!--Button1-->
     <Style TargetType="Button" x:Key="Button1" BasedOn="{StaticResource ControlStyle}">
         <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontSize" Value="14"/>
         <Setter Property="MinWidth" Value="150"/>
         <Setter Property="MaxHeight" Value="60"/>
-        <Setter Property="Foreground" Value="White"/>
-        <Setter Property="Background" Value="{StaticResource MainAccentColor}"/>
+        <Setter Property="Foreground" Value="{StaticResource c1}"/>
+        <Setter Property="Background" Value="{StaticResource c4}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -138,7 +145,7 @@
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Trigger.Setters>
-                    <Setter Property="Background" Value="{StaticResource MainAccentColorAlternate}"/>
+                    <Setter Property="Background" Value="{StaticResource c5}"/>
                 </Trigger.Setters>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
@@ -149,7 +156,8 @@
             </Trigger>
             <Trigger Property="IsMouseCaptured" Value="True">
                 <Trigger.Setters>
-                    <Setter Property="Background" Value="{StaticResource MainDarkColor}"/>
+                    <Setter Property="Background" Value="{StaticResource c2}"/>
+                    <Setter Property="Foreground" Value="{StaticResource c5}"/>
                 </Trigger.Setters>
             </Trigger>
         </Style.Triggers>
@@ -160,13 +168,13 @@
         <Setter Property="MinWidth" Value="90"/>
         <Setter Property="MaxHeight" Value="40"/>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="Background" Value="{StaticResource MainDarkColor}"/>
+        <Setter Property="Background" Value="{StaticResource c1}"/>
         <Setter Property="Foreground" Value="White"/>
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Trigger.Setters>
-                    <Setter Property="Background" Value="{StaticResource AddDarkColor}"/>
+                    <Setter Property="Background" Value="{StaticResource c2}"/>
                 </Trigger.Setters>
             </Trigger>
         </Style.Triggers>
@@ -226,27 +234,49 @@
     </Style>
     
     <Style TargetType="{x:Type Border}" x:Key="BlockBorder1" BasedOn="{StaticResource BorderBase}">
-        <Setter Property="Background" Value="{StaticResource MainColor}"/>
+        <Setter Property="Background" Value="{StaticResource c2}"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
     
     <Style TargetType="{x:Type Border}" x:Key="BlockBorder2" BasedOn="{StaticResource BorderBase}">
-        <Setter Property="Background" Value="{StaticResource AddColor}"/>
+        <Setter Property="Background" Value="{StaticResource c3}"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
     
-    <Style TargetType="{x:Type Border}" x:Key="ViewBorder" BasedOn="{StaticResource BorderBase}">
-        <Setter Property="Background" Value="{StaticResource MainDarkColor}"/>
+    <Style TargetType="{x:Type Border}" x:Key="ViewBorder1" BasedOn="{StaticResource BorderBase}">
+        <Setter Property="Background" Value="{StaticResource c1}"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
         <Setter Property="VerticalAlignment" Value="Stretch"/>
     </Style>
+    <Style TargetType="Border" x:Key="NavBorder" BasedOn="{StaticResource ViewBorder1}">
+        
+    </Style>
     
     <Style TargetType="{x:Type Border}" x:Key="ViewBorder2" BasedOn="{StaticResource BorderBase}">
-        <Setter Property="Background" Value="{StaticResource MainColor}"/>
+        <Setter Property="Background" Value="{StaticResource c2}"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
         <Setter Property="VerticalAlignment" Value="Stretch"/>
+    </Style>
+    <Style TargetType="{x:Type Border}" x:Key="ItemBorder" BasedOn="{StaticResource BlockBorder1}">
+        <Setter Property="Background" Value="{StaticResource c2}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource c5}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.Setters>
+                    <Setter Property="Background" Value="{StaticResource c5}"/>
+                </Trigger.Setters>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style TargetType="{x:Type Border}" x:Key="SelectedItemBorder" BasedOn="{StaticResource BlockBorder1}">
+        <Setter Property="Background" Value="{StaticResource c5}"/>
+        <!--<Setter Property="BorderBrush" Value="{StaticResource c5}"/>-->
+        <!--<Setter Property="BorderThickness" Value="2"/>-->
     </Style>
 
 </ResourceDictionary>

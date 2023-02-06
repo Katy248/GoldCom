@@ -23,6 +23,9 @@
                 </DataTemplate>
             </ContentControl.Resources>
         </ContentControl>
-        <Label Grid.Row="1" Style="{StaticResource Label1}" Content="Requests"/>
+        <Label 
+            Grid.Row="1" 
+            Style="{StaticResource Label1}" 
+            Content="Requests"/>
     </Grid>
 </UserControl>

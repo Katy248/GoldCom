@@ -6,8 +6,9 @@
              xmlns:local="clr-namespace:GoldCom.Views.CustomControls"
              mc:Ignorable="d"  d:DesignWidth="800">
     <Grid>
-        <Border Style="{StaticResource BlockBorder1}"
-                Background="{StaticResource AddDarkColor}" HorizontalAlignment="Stretch">
+        <Border 
+            Style="{StaticResource ItemBorder}" 
+            HorizontalAlignment="Stretch">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition MinWidth="50"/>
@@ -20,11 +21,11 @@
                 </Grid.ColumnDefinitions>
                 
                 <TextBlock Text="{DynamicResource CustomerCompanyName}"/>
-                <GridSplitter Grid.Column="1" Background="{StaticResource AddColor}" HorizontalAlignment="Stretch"/>
+                <GridSplitter Grid.Column="1"/>
                 <TextBlock Grid.Column="2" Text="{StaticResource CustomerCeoName}"/>
-                <GridSplitter Grid.Column="3" Background="{StaticResource AddColor}" HorizontalAlignment="Stretch"/>
+                <GridSplitter Grid.Column="3"/>
                 <TextBlock Grid.Column="4" Text="{StaticResource CustomerRepresentativeName}"/>
-                <GridSplitter Grid.Column="5" Background="{StaticResource AddColor}" HorizontalAlignment="Stretch"/>
+                <GridSplitter Grid.Column="5" />
                 <TextBlock Grid.Column="6" Text="{StaticResource CustomerCompanyMail}"/>
             </Grid>
         </Border>
@@ -32,6 +33,11 @@
     <UserControl.Resources>
         <Style TargetType="TextBlock" BasedOn="{StaticResource TextBlock1}">
 
+        </Style>
+        <Style TargetType="GridSplitter">
+            <Setter Property="Background" Value="{StaticResource c3}"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Focusable" Value="False"/>
         </Style>
     </UserControl.Resources>
 </UserControl>

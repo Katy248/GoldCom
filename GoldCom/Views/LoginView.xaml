@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Border
-        Style="{StaticResource ViewBorder}"
+        Style="{StaticResource ViewBorder1}"
         MinWidth="230">
         <StackPanel Orientation="Vertical" Style="{DynamicResource StackPanel1}">
             <Label
