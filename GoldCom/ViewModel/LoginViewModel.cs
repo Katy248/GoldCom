@@ -1,11 +1,10 @@
 ﻿using System.Diagnostics;
-using System.Security;
 using System.Windows.Input;
+using GoldCom.Commands;
 using GoldCom.Database;
 using GoldCom.Models;
+using GoldCom.Navigations;
 using GoldCom.Services;
-using KVVM.Navigation;
-using KVVM.ViewModels;
 
 namespace GoldCom.ViewModel;
 
@@ -21,7 +20,7 @@ public class LoginViewModel : ViewModelBase
         this.userManager = userManager;
         this.context = context;
 
-        LoginCommand = new KVVM.Commands.Command(p =>
+        LoginCommand = new Command(p =>
         {
             if (userManager.Login(Login, Password, context) is not null)
             {

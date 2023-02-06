@@ -1,8 +1,7 @@
 ﻿using System.Windows.Input;
-using KVVM.Navigation;
-using KVVM.ViewModels;
+using GoldCom.Navigations;
 
-namespace GoldCom.ViewModel; 
+namespace GoldCom.ViewModel;
 public class NavigationBarViewModel : ViewModelBase
 {
     private readonly INavigationService homeNavigation;

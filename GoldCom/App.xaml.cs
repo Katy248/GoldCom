@@ -2,12 +2,13 @@
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using KVVM.Navigation;
+//using KVVM.Navigation;
 using GoldCom.Extensions;
 using GoldCom.ViewModel;
 using GoldCom.Database;
 using GoldCom.Services;
 using GoldCom.Models;
+using GoldCom.Navigations;
 
 namespace GoldCom;
 /// <summary>

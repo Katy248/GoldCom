@@ -1,5 +1,4 @@
-﻿using KVVM.Navigation;
-using KVVM.ViewModels;
+﻿using GoldCom.Navigations;
 
 namespace GoldCom.ViewModel;
 
@@ -11,7 +10,7 @@ public class MainViewModel : ViewModelBase
     {
         this.navigationStore = navigationStore;
 
-        navigationStore.CurrentViewModelChanged += (s, e) => RaisePropertyChanged(nameof(CurrentViewModel));
+        navigationStore.CurrentViewModelChanged += () => RaisePropertyChanged(nameof(CurrentViewModel));
     }
 
     public ViewModelBase CurrentViewModel => navigationStore.CurrentViewModel;

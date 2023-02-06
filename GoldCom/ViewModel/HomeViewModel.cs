@@ -1,8 +1,6 @@
 ﻿using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using GoldCom.Models;
 using GoldCom.Services;
-using KVVM.ViewModels;
 
 namespace GoldCom.ViewModel;
 

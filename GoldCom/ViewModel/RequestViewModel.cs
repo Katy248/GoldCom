@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 using GoldCom.Database;
 using GoldCom.Models;
-using KVVM.ViewModels;
-using Microsoft.EntityFrameworkCore;
 
 namespace GoldCom.ViewModel;
 

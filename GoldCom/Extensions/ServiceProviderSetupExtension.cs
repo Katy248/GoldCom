@@ -1,6 +1,5 @@
-﻿using System;
+﻿using GoldCom.Navigations;
 using GoldCom.ViewModel;
-using KVVM.Navigation;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace GoldCom.Extensions;

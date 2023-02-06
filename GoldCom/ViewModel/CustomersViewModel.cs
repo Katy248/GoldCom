@@ -3,7 +3,6 @@ using System.Linq;
 using System.Windows.Input;
 using GoldCom.Database;
 using GoldCom.Models;
-using KVVM.ViewModels;
 
 namespace GoldCom.ViewModel;
 
