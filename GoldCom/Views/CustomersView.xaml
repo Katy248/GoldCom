@@ -32,16 +32,38 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Label Style="{StaticResource Label1}" Content="{StaticResource Customers}"/>
-            <cc:CustomerItemsHeader Grid.Row="1" Margin="10"/>
+            <Grid Grid.Row="2" Margin="10">
+            <DataGrid 
+                IsReadOnly="True"
+                Style="{StaticResource DataGrid1}" 
+                ItemsSource="{Binding Customers}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn 
+                        Header="{DynamicResource CustomerCompanyName}" 
+                        Binding="{Binding CompanyName}"/>
+                    <DataGridTextColumn 
+                        Header="{DynamicResource CustomerCeoName}" 
+                        Binding="{Binding CeoName}"/>
+                    <DataGridTextColumn 
+                        Header="{DynamicResource CustomerRepresentativeName}" 
+                        Binding="{Binding RepresentativeName}"/>
+                    <DataGridTextColumn 
+                        Header="{DynamicResource CustomerCompanyMail}" 
+                        Binding="{Binding CompanyMail}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            </Grid>
+            <!--<cc:CustomerItemsHeader Grid.Row="1" Margin="10"/>
             <ScrollViewer 
                 Grid.Row="2"
                 Margin="10"
                 VerticalScrollBarVisibility="Hidden">
-                <ItemsControl 
+                <ListView 
                     VirtualizingStackPanel.VirtualizationMode="Recycling"
                     VirtualizingStackPanel.IsVirtualizing="True"
-                    ItemsSource="{Binding Customers}">
-                    <ItemsControl.ItemTemplate>
+                    ItemsSource="{Binding Customers}"
+                    Background="{x:Null}">
+                    <ListView.ItemTemplate>
                         <DataTemplate DataType="models:Customer">
                             <cc:CustomerItem 
                                 HorizontalContentAlignment="Stretch"
@@ -49,14 +71,14 @@
                                 VerticalAlignment="Stretch"
                                 VerticalContentAlignment="Stretch"/>
                         </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                    <!--<ListBox.ItemsPanel>
+                    </ListView.ItemTemplate>
+                    <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <StackPanel/>
+                            <StackPanel Style="{StaticResource StackPanel1}"/>
                         </ItemsPanelTemplate>
-                    </ListBox.ItemsPanel>-->
-                </ItemsControl>
-            </ScrollViewer>
+                    </ListView.ItemsPanel>
+                </ListView>
+            </ScrollViewer>-->
             <StackPanel Style="{StaticResource StackPanel1}"
                 Grid.Row="3"
                 Orientation="Horizontal" 
@@ -69,18 +91,11 @@
     </Grid>
     <UserControl.Resources>
 
-        <Style TargetType="ItemsControl">
-            <Setter Property="Background" Value="{x:Null}"/>
-            <Style.Triggers>
-                <Trigger Property="IsFocused" Value="True">
-                    
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+        
         <Style TargetType="Button" BasedOn="{StaticResource Button1}">
-            
+
         </Style>
-        <Style TargetType="{x:Type DataGridCell}">
+        <!--<Style TargetType="{x:Type DataGridCell}">
             <Setter Property="HorizontalContentAlignment" Value="Right"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Background" Value="{StaticResource AddColor}"/>
@@ -125,6 +140,6 @@
             <Setter Property="RowHeaderStyle" Value="{StaticResource DataGridRowHeader}"/>
             <Setter Property="ColumnHeaderStyle" Value="{StaticResource DataGridColumnHeader}"/>
             <Setter Property="Background" Value="{StaticResource AddColor}"/>
-        </Style>
+        </Style>-->
     </UserControl.Resources>
 </UserControl>
