@@ -116,17 +116,24 @@
     
     <!--Button1-->
     <Style TargetType="Button" x:Key="Button1" BasedOn="{StaticResource ControlStyle}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="MinWidth" Value="150"/>
         <Setter Property="MaxHeight" Value="60"/>
         <Setter Property="Foreground" Value="{StaticResource c1}"/>
         <Setter Property="Background" Value="{StaticResource c4}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource c4}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border 
+                        RenderOptions.EdgeMode="Aliased"
+                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                         CornerRadius="10"
+                        BorderBrush="{TemplateBinding BorderBrush}"
                         Background="{TemplateBinding Background}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         Height="{TemplateBinding Height}"
@@ -142,6 +149,12 @@
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             Content="{TemplateBinding Content}"/>
+                        <!--<Border.BitmapEffect>
+                            <DropShadowBitmapEffect 
+                                Color="Black" 
+                                Softness="0.2" 
+                                ShadowDepth="0.1" Direction="360"></DropShadowBitmapEffect>
+                        </Border.BitmapEffect>-->
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -150,6 +163,8 @@
             <Trigger Property="IsMouseOver" Value="True">
                 <Trigger.Setters>
                     <Setter Property="Background" Value="{StaticResource c5}"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="BorderBrush" Value="{StaticResource c5}"/>
                 </Trigger.Setters>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
@@ -161,7 +176,8 @@
             <Trigger Property="IsMouseCaptured" Value="True">
                 <Trigger.Setters>
                     <Setter Property="Background" Value="{StaticResource c2}"/>
-                    <Setter Property="Foreground" Value="{StaticResource c5}"/>
+                    <Setter Property="Foreground" Value="{StaticResource c4}"/>
+                    <Setter Property="BorderBrush" Value="{StaticResource c4}"/>
                 </Trigger.Setters>
             </Trigger>
         </Style.Triggers>
@@ -179,6 +195,7 @@
             <Trigger Property="IsMouseOver" Value="True">
                 <Trigger.Setters>
                     <Setter Property="Background" Value="{StaticResource c2}"/>
+                    <Setter Property="Foreground" Value="{StaticResource c3}"/>
                 </Trigger.Setters>
             </Trigger>
         </Style.Triggers>
