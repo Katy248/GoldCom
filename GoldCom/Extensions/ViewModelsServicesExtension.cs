@@ -25,7 +25,7 @@ public static class ViewModelsServicesExtension
             .AddTransient<AccontViewModel>(/*ViewModels.CreateAccontViewModel*/);
     }
 
-    public static NavigationBarViewModel CreateNavigationBarViewModel(IServiceProvider service)
+    /*public static NavigationBarViewModel CreateNavigationBarViewModel(IServiceProvider service)
     {
         var nav = new NavigationBarViewModel(
             NavigationServicesExtensions.CreateHomeNavigationService(service),
@@ -54,12 +54,12 @@ public static class ViewModelsServicesExtension
         var request = new RequestViewModel(null); //TODO: implement it
         return request;
     }
-    /*public static CustomersViewModel CreateCustomersViewModel(IServiceProvider service)
+    *//*public static CustomersViewModel CreateCustomersViewModel(IServiceProvider service)
     {
         var customers = new CustomersViewModel(
             service.GetRequiredService<NavigationBarViewModel>());
         return customers;
-    }*/
+    }*//*
     public static CustomerViewModel CreateCustomerViewModel(IServiceProvider service)
     {
         var customer = new CustomerViewModel();
@@ -76,5 +76,5 @@ public static class ViewModelsServicesExtension
         var account = new AccontViewModel();
 
         return account;
-    }
+    }*/
 }
