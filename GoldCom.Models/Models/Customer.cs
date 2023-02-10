@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoldCom.Models;
+namespace GoldCom.Domen.Models;
 public class Customer : DbEntity
 {
     public string CompanyName { get; set; }
@@ -22,7 +22,7 @@ public class Customer : DbEntity
     public string RepresentativeEmail { get; set; }
     public string CeoFirstName { get; set; }
     public string CeoSurname { get; set; }
-    public string CeoLastName { get; set;}
+    public string CeoLastName { get; set; }
     public string RepresentativeName => $"{RepresentativeSurname} {RepresentativeFirstName} {RepresentativeLastName}";
     public string CeoName => $"{CeoSurname} {CeoFirstName} {CeoLastName}";
 

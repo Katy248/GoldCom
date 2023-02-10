@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Controls;
 using GoldCom.Database;
-using GoldCom.Models;
+using GoldCom.Domen.Models;
+using GoldCom.MVVM.ViewModels;
 
 namespace GoldCom.ViewModel;
 

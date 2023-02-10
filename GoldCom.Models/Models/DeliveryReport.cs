@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoldCom.Models;
-public class Position : DbEntity
+namespace GoldCom.Domen.Models;
+public class DeliveryReport : StockReport
 {
-    public string Name { get; set; }
+    public DateTime DeliveryDate { get; set; }
 }

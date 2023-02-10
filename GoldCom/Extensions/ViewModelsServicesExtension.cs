@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using GoldCom.Database;
-using GoldCom.Models;
+using GoldCom.Domen.Models;
 using GoldCom.Services;
 using GoldCom.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
@@ -43,8 +39,7 @@ public static class ViewModelsServicesExtension
     {
         var login = new LoginViewModel(
                 NavigationServicesExtensions.CreateHomeNavigationService(service),
-                service.GetRequiredService<IUserManager<User>>(),
-                service.GetRequiredService<ApplicationDbContext>());
+                service.GetRequiredService<IUserManager<User>>());
         return login;
     }
     public static RequestsViewModel CreateRequestsViewModel(IServiceProvider service)

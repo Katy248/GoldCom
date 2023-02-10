@@ -2,13 +2,12 @@
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-//using KVVM.Navigation;
 using GoldCom.Extensions;
 using GoldCom.ViewModel;
 using GoldCom.Database;
 using GoldCom.Services;
-using GoldCom.Models;
 using GoldCom.Navigations;
+using GoldCom.Domen.Models;
 
 namespace GoldCom;
 /// <summary>
@@ -23,17 +22,16 @@ public partial class App : Application
     {
         // Add database context
         var connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-        services.AddDbContext<ApplicationDbContext>(
-            options => options.UseSqlite(connectionString));
 
         serviceProvider = services
+            .AddDbContext<ApplicationDbContext>(
+            options => options.UseSqlite(connectionString))
             .AddSingleton<NavigationStore>()
             .AddSingleton<IUserManager<User>, UserManager>()
 
             .AddViews()
             .AddNavigations()
 
-            // Add main window with its view
             .AddSingleton<MainWindow>()
 
             .BuildServiceProvider();

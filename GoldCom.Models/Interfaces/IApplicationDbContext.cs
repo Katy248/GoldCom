@@ -3,17 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GoldCom.Domen.Interfaces;
 using GoldCom.Domen.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace GoldCom.Database;
-public class ApplicationDbContext : DbContext, IApplicationDbContext
+namespace GoldCom.Domen.Interfaces;
+public interface IApplicationDbContext
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
-    {
-        Database.EnsureCreated();
-    }
     public DbSet<Customer> Customers { get; set; }
     public DbSet<DeliveryReport> DeliveryReports { get; set; }
     public DbSet<ShipmentReport> ShipmentReports { get; set; }

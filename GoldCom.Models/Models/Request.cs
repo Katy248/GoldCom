@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoldCom.Models;
-public abstract class StockReport : DbEntity
+namespace GoldCom.Domen.Models;
+public class Request : DbEntity
 {
-    public StockUnit StockUnit { get; set; }
+    public Customer Customer { get; set; }
     public User Employee { get; set; }
+    public DateTime CreationDate { get; set; }
 }

@@ -1,5 +1,5 @@
 ﻿using System.Diagnostics;
-using GoldCom.Models;
+using GoldCom.Domen.Models;
 using GoldCom.Services;
 
 namespace GoldCom.ViewModel;

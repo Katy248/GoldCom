@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoldCom.Models;
+namespace GoldCom.Domen.Models;
 public class StockUnit : DbEntity
 {
     public MaterialType MaterialType { get; set; }

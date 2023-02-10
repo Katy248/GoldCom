@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Identity.Client;
-
-namespace GoldCom.Commands;
+﻿namespace GoldCom.Commands;
 public class Command : CommandBase
 {
     private readonly Action<object?>? execute;

@@ -1,5 +1,5 @@
 ﻿using System;
-using GoldCom.ViewModel;
+using GoldCom.MVVM.ViewModels;
 
 namespace GoldCom.Navigations;
 public class NavigationService<TViewModel> : INavigationService where TViewModel: ViewModelBase 

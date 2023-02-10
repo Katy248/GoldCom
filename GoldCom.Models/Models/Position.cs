@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoldCom.Navigations;
-public interface INavigationService
+namespace GoldCom.Domen.Models;
+public class Position : DbEntity
 {
-    void Navigate();
+    public string Name { get; set; }
 }

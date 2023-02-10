@@ -11,7 +11,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using GoldCom.ViewModel;
-using GoldCom.Models;
+using GoldCom.Domen.Models;
 
 namespace GoldCom.Views
 {

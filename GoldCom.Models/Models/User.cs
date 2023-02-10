@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoldCom.Models;
+namespace GoldCom.Domen.Models;
 public class User : DbEntity
 {
     public string FistName { get; set; }

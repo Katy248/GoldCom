@@ -1,18 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-using GoldCom.Database;
-using GoldCom.Models;
+﻿using System.Linq;
+using GoldCom.Domen.Interfaces;
+using GoldCom.Domen.Models;
 
 namespace GoldCom.Services;
 public class UserManager : IUserManager<User>
 {
+    private readonly IApplicationDbContext context;
+
+    public UserManager(IApplicationDbContext context)
+    {
+        this.context = context;
+    }
+
     public User? User { get; set; }
 
-    public User? Login(string login, string password, ApplicationDbContext context)
+    public User? Login(string login, string password)
     {
         return User = context.Users
                 .FirstOrDefault(u => u.Email == login && u.Password == password);

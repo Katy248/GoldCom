@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoldCom.Models;
+namespace GoldCom.Domen.Models;
 public class MaterialType : DbEntity
 {
     public string Name { get; set; }
