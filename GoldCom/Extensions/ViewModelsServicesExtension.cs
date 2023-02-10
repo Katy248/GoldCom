@@ -1,8 +1,4 @@
-﻿using System;
-using GoldCom.Database;
-using GoldCom.Domen.Models;
-using GoldCom.Services;
-using GoldCom.ViewModel;
+﻿using GoldCom.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace GoldCom.Extensions;
@@ -13,16 +9,16 @@ public static class ViewModelsServicesExtension
         return services
             .AddSingleton<MainViewModel>()
 
-            .AddTransient<NavigationBarViewModel>(/*ViewModels.CreateNavigationBarViewModel*/)
+            .AddTransient<NavigationBarViewModel>()
 
             .AddTransient<HomeViewModel>()
-            .AddTransient<LoginViewModel>(/*ViewModels.CreateLoginViewModel*/)
-            .AddTransient<RequestsViewModel>(/*ViewModels.CreateRequestsViewModel*/)
-            .AddTransient<RequestViewModel>(/*ViewModels.CreateRequestViewModel*/)
-            .AddTransient<CustomersViewModel>(/*ViewModels.CreateCustomersViewModel*/)
-            .AddTransient<CustomerViewModel>(/*ViewModels.CreateCustomerViewModel*/)
-            .AddTransient<StockViewModel>(/*ViewModels.CreateStockViewModel*/)
-            .AddTransient<AccontViewModel>(/*ViewModels.CreateAccontViewModel*/);
+            .AddTransient<LoginViewModel>()
+            .AddTransient<RequestsViewModel>()
+            .AddTransient<RequestViewModel>()
+            .AddTransient<CustomersViewModel>()
+            .AddTransient<CustomerViewModel>()
+            .AddTransient<StockViewModel>()
+            .AddTransient<AccontViewModel>();
     }
 
     /*public static NavigationBarViewModel CreateNavigationBarViewModel(IServiceProvider service)
