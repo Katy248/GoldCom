@@ -7,6 +7,36 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Label Style="{StaticResource Label1}" Content="Account"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.RowSpan="2" Style="{StaticResource ViewBorder2}"/>
+        <Label Grid.Row="0"
+            Style="{StaticResource Label1}" Content="Account"/>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal" Style="{StaticResource StackPanel1}">
+            <StackPanel HorizontalAlignment="Left" Style="{StaticResource StackPanel1}">
+                <Label Content="First name"/>
+                <TextBox Text="{Binding FirstName}"/>
+                <Label Content="Surname"/>
+                <TextBox Text="{Binding Surame}"/>
+                <Label Content="Last name"/>
+                <TextBox Text="{Binding LastName}"/>
+                <Label Content="Email"/>
+                <TextBox Text="{Binding Email}"/>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Bottom" Style="{StaticResource StackPanel1}">
+            <Button 
+                Style="{StaticResource Button1}"
+                Content="Save changes"/>
+            <Button 
+                Style="{StaticResource Button1}"
+                Content="Back"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
+    <UserControl.Resources>
+        <Style TargetType="TextBox" BasedOn="{StaticResource Input1}"/>
+        <Style TargetType="Label" BasedOn="{StaticResource Label1}"/>
+    </UserControl.Resources>
 </UserControl>

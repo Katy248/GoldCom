@@ -11,6 +11,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <!--Title-->
             <Label 
@@ -28,13 +29,18 @@
                 <Button Content="Customers" Command="{Binding NavigateToCustomers}" />
                 <Button Content="Requests" Command="{Binding NavigateToRequests}" />
                 <Button Content="Stock" Command="{Binding NavigateToStock}" />
-                <!--<Button Content="Users" Style="{DynamicResource NavButton}" />-->
-                
             </StackPanel>
+            <Border Grid.Column="2" CornerRadius="10" >
+                <Button 
+                    Style="{StaticResource NavButton}"
+                    Content="{Binding Username}" MinWidth="150"
+                    Command="{Binding NavigateToAccount}"/>
+
+            </Border>
         </Grid>
         <Border.Resources>
             <Style TargetType="Button" BasedOn="{StaticResource NavButton}">
-                
+
             </Style>
         </Border.Resources>
     </Border>

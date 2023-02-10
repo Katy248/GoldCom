@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using GoldCom.Database;
 using GoldCom.Domen.Interfaces;
 using GoldCom.Domen.Models;
 
@@ -7,7 +8,7 @@ public class UserManager : IUserManager<User>
 {
     private readonly IApplicationDbContext context;
 
-    public UserManager(IApplicationDbContext context)
+    public UserManager(ApplicationDbContext context)
     {
         this.context = context;
     }

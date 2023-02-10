@@ -75,11 +75,11 @@ public static class NavigationServicesExtensions
             () => provider.GetRequiredService<StockViewModel>());
 
         return nav;
-    }public static NavigationService<AccontViewModel> CreateAccountNavigationService(IServiceProvider provider)
+    }public static NavigationService<AccountViewModel> CreateAccountNavigationService(IServiceProvider provider)
     {
-        var nav = new NavigationService<AccontViewModel>(
+        var nav = new NavigationService<AccountViewModel>(
             provider.GetRequiredService<NavigationStore>(), 
-            () => provider.GetRequiredService<AccontViewModel>());
+            () => provider.GetRequiredService<AccountViewModel>());
 
         return nav;
     }

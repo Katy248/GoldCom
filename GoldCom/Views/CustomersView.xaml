@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GoldCom.Views"
              xmlns:viewmodels="clr-namespace:GoldCom.ViewModel"
-             xmlns:models="clr-namespace:GoldCom.Models"
+             xmlns:models="clr-namespace:GoldCom.Domen.Models;assembly=GoldCom.Domen"
              xmlns:cc="clr-namespace:GoldCom.Views.CustomControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">

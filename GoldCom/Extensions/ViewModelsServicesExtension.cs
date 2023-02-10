@@ -18,7 +18,7 @@ public static class ViewModelsServicesExtension
             .AddTransient<CustomersViewModel>()
             .AddTransient<CustomerViewModel>()
             .AddTransient<StockViewModel>()
-            .AddTransient<AccontViewModel>();
+            .AddTransient<AccountViewModel>();
     }
 
     /*public static NavigationBarViewModel CreateNavigationBarViewModel(IServiceProvider service)
