@@ -7,7 +7,7 @@ using GoldCom.ViewModel;
 using GoldCom.Database;
 using GoldCom.Services;
 using GoldCom.Navigations;
-using GoldCom.Domen.Models;
+using GoldCom.Domain.Models;
 
 namespace GoldCom;
 /// <summary>

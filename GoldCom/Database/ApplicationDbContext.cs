@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GoldCom.Domen.Interfaces;
-using GoldCom.Domen.Models;
+using GoldCom.Domain.Interfaces;
+using GoldCom.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace GoldCom.Database;

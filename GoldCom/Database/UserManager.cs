@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using GoldCom.Database;
-using GoldCom.Domen.Interfaces;
-using GoldCom.Domen.Models;
+using GoldCom.Domain.Interfaces;
+using GoldCom.Domain.Models;
 
 namespace GoldCom.Services;
 public class UserManager : IUserManager<User>

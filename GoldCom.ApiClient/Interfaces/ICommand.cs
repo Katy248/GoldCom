@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoldCom.Domain.Models;
-public class DeliveryReport : StockReport
+namespace GoldCom.ApiClient.Interfaces;
+internal class ICommand
 {
-    public DateTime DeliveryDate { get; set; }
 }

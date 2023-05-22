@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using GoldCom.Commands;
 using GoldCom.Database;
-using GoldCom.Domen.Models;
+using GoldCom.Domain.Models;
 using GoldCom.MVVM.ViewModels;
 using GoldCom.Navigations;
 using GoldCom.Services;

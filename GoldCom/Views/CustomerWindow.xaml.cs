@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using GoldCom.Database;
-using GoldCom.Domen.Models;
+using GoldCom.Domain.Models;
 
 namespace GoldCom.Views
 {

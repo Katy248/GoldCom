@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Input;
 using GoldCom.Database;
-using GoldCom.Domen.Models;
+using GoldCom.Domain.Models;
 
 namespace GoldCom.ViewModel;
 
