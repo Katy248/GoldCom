@@ -11,19 +11,19 @@ namespace GoldCom.ViewModel;
 
 public class LoginViewModel : ViewModelBase
 {
-    private readonly INavigationService homeNavigationService;
-    private readonly IUserManager<User> userManager;
+    private readonly INavigationService _homeNavigationService;
+    private readonly IUserManager<User> _userManager;
 
-    public LoginViewModel(NavigationService<HomeViewModel> homeNavigationService, IUserManager<User> userManager)
+    public LoginViewModel(NavigationServiceFactory navigation, IUserManager<User> userManager)
     {
-        this.homeNavigationService = homeNavigationService;
-        this.userManager = userManager;
+        _homeNavigationService = navigation.GetNavigationService<HomeViewModel>();
+        _userManager = userManager;
 
         LoginCommand = new Command(p =>
         {
             if (userManager.Login(Login, Password) is not null)
             {
-                homeNavigationService.Navigate();
+                _homeNavigationService.Navigate();
                 Debug.WriteLine("Logged in");
             }
             else Debug.WriteLine("Not logged");

@@ -3,39 +3,36 @@ using GoldCom.Domain.Models;
 using GoldCom.MVVM.ViewModels;
 using GoldCom.Navigations;
 using GoldCom.Services;
+using GoldCom.Views;
 
 namespace GoldCom.ViewModel;
 public class NavigationBarViewModel : ViewModelBase
 {
-    private readonly INavigationService homeNavigation;
-    private readonly INavigationService customersNavigation;
-    private readonly INavigationService requestsNavigation;
-    private readonly INavigationService stockNavigation;
-    private readonly INavigationService accountNavigation;
-    private readonly IUserManager<User> userManager;
+    private readonly INavigationService _homeNavigation;
+    private readonly INavigationService _customersNavigation;
+    private readonly INavigationService _requestsNavigation;
+    private readonly INavigationService _stockNavigation;
+    private readonly INavigationService _accountNavigation;
+    private readonly IUserManager<User> _userManager;
 
     public NavigationBarViewModel(
-		NavigationService<HomeViewModel> homeNavigation, 
-		NavigationService<CustomersViewModel> customersNavigation, 
-		NavigationService<RequestsViewModel> requestsNavigation,
-        NavigationService<StockViewModel> stockNavigation,
-        NavigationService<AccountViewModel> accountNavigation,
+		NavigationServiceFactory navigation,
         IUserManager<User> userManager)
 	{
-        this.homeNavigation = homeNavigation;
-        this.customersNavigation = customersNavigation;
-        this.requestsNavigation = requestsNavigation;
-        this.stockNavigation = stockNavigation;
-        this.accountNavigation = accountNavigation;
-        this.userManager = userManager;
-        NavigateToHome = new NavigationCommand(homeNavigation);
-        NavigateToRequests = new NavigationCommand(requestsNavigation);
-        NavigateToCustomers = new NavigationCommand(customersNavigation);
-        NavigateToStock = new NavigationCommand(stockNavigation);
-        NavigateToStock = new NavigationCommand(accountNavigation);
+        _homeNavigation = navigation.GetNavigationService<HomeViewModel>();
+        _customersNavigation = navigation.GetNavigationService<CustomersViewModel>();
+        _requestsNavigation = navigation.GetNavigationService<RequestsViewModel>();
+        _stockNavigation = navigation.GetNavigationService<StockViewModel>();
+        _accountNavigation = navigation.GetNavigationService<AccountViewModel>();
+        _userManager = userManager;
+        NavigateToHome = new NavigationCommand(_homeNavigation);
+        NavigateToRequests = new NavigationCommand(_requestsNavigation);
+        NavigateToCustomers = new NavigationCommand(_customersNavigation);
+        NavigateToStock = new NavigationCommand(_stockNavigation);
+        NavigateToAccount = new NavigationCommand(_accountNavigation);
     }
 
-    public string Username => userManager?.User?.Email ?? "unknown@user";
+    public string Username => _userManager?.User?.Email ?? "unknown@user";
 
     public ICommand NavigateToHome { get; set; }
     public ICommand NavigateToCustomers { get; set; }

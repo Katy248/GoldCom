@@ -1,4 +1,5 @@
 ﻿using System;
+using GoldCom.MVVM.ViewModels;
 using GoldCom.Navigations;
 using GoldCom.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,14 +11,7 @@ public static class NavigationServicesExtensions
     public static IServiceCollection AddNavigations(this IServiceCollection services)
     {
         return services
-            .AddTransient(CreateHomeNavigationService)
-            .AddTransient(CreateLoginNavigationService)
-            .AddTransient(CreateCustomersNavigationService)
-            .AddTransient(CreateCustomerNavigationService)
-            .AddTransient(CreateRequestsNavigationService)
-            .AddTransient(CreateRequestNavigationService)
-            .AddTransient(CreateStockNavigationService)
-            .AddTransient(CreateAccountNavigationService);
+            .AddTransient<NavigationServiceFactory>(provider => new(provider))
     }
 
     public static NavigationService<LoginViewModel> CreateLoginNavigationService(IServiceProvider provider)
@@ -83,4 +77,5 @@ public static class NavigationServicesExtensions
 
         return nav;
     }
+    
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using GoldCom..Navigations;
 using GoldCom.Domain.Models;
 using GoldCom.MVVM.ViewModels;
 using GoldCom.Navigations;
@@ -8,30 +9,29 @@ namespace GoldCom.ViewModel;
 
 public class AccountViewModel : ViewModelBase
 {
-    private readonly IUserManager<User> userManager;
-    private readonly NavigationService<LoginViewModel> loginNavigation;
-    private readonly NavigationService<HomeViewModel> homeNavigation;
+    private readonly IUserManager<User> _userManager;
+    private readonly NavigationService<LoginViewModel> _loginNavigation;
+    private readonly NavigationService<HomeViewModel> _homeNavigation;
 
     public AccountViewModel(
         IUserManager<User> userManager,
-        NavigationService<LoginViewModel> loginNavigation,
-        NavigationService<HomeViewModel> homeNavigation)
+        NavigationServiceFactory navigation)
 	{
-        this.userManager = userManager;
-        this.loginNavigation = loginNavigation;
-        this.homeNavigation = homeNavigation;
+        _userManager = userManager;
+        _loginNavigation = navigation.GetNavigationService<LoginViewModel>();
+        _homeNavigation = navigation.GetNavigationService<HomeViewModel>();
     }
 
     public User CurrentUser 
     { 
         get
         {
-            if (userManager.User is null)
+            if (_userManager.User is null)
             {
-                homeNavigation.Navigate();
+                _homeNavigation.Navigate();
                 return new User();
             }
-            return userManager.User;
+            return _userManager.User;
         } 
     }
     public string FirstName 
