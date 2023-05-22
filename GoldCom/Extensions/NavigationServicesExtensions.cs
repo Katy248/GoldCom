@@ -11,7 +11,7 @@ public static class NavigationServicesExtensions
     public static IServiceCollection AddNavigations(this IServiceCollection services)
     {
         return services
-            .AddTransient<NavigationServiceFactory>(provider => new(provider))
+            .AddTransient<NavigationServiceFactory>(provider => new(provider));
     }
 
     public static NavigationService<LoginViewModel> CreateLoginNavigationService(IServiceProvider provider)

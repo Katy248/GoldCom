@@ -1,5 +1,4 @@
 ﻿using System;
-using GoldCom..Navigations;
 using GoldCom.Domain.Models;
 using GoldCom.MVVM.ViewModels;
 using GoldCom.Navigations;
